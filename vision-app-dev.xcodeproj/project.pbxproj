@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C4976AC23D3EFE700B6E296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4976AB23D3EFE700B6E296 /* AppDelegate.swift */; };
-		0C4976AE23D3EFE800B6E296 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4976AD23D3EFE800B6E296 /* ViewController.swift */; };
+		0C4976AE23D3EFE800B6E296 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4976AD23D3EFE800B6E296 /* CameraVC.swift */; };
 		0C4976B123D3EFE800B6E296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4976AF23D3EFE800B6E296 /* Main.storyboard */; };
 		0C4976B423D3EFE800B6E296 /* vision_app_dev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C4976B223D3EFE800B6E296 /* vision_app_dev.xcdatamodeld */; };
 		0C4976B623D3EFE900B6E296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4976B523D3EFE900B6E296 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		0C4976A823D3EFE700B6E296 /* vision-app-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vision-app-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4976AB23D3EFE700B6E296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C4976AD23D3EFE800B6E296 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C4976AD23D3EFE800B6E296 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		0C4976B023D3EFE800B6E296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C4976B323D3EFE800B6E296 /* vision_app_dev.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = vision_app_dev.xcdatamodel; sourceTree = "<group>"; };
 		0C4976B523D3EFE900B6E296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,8 +56,11 @@
 		0C4976AA23D3EFE700B6E296 /* vision-app-dev */ = {
 			isa = PBXGroup;
 			children = (
+				0C4976C223D3F03B00B6E296 /* Resources */,
+				0C4976C123D3F02C00B6E296 /* View */,
+				0C4976C023D3F01F00B6E296 /* Controller */,
 				0C4976AB23D3EFE700B6E296 /* AppDelegate.swift */,
-				0C4976AD23D3EFE800B6E296 /* ViewController.swift */,
+				0C4976AD23D3EFE800B6E296 /* CameraVC.swift */,
 				0C4976AF23D3EFE800B6E296 /* Main.storyboard */,
 				0C4976B523D3EFE900B6E296 /* Assets.xcassets */,
 				0C4976B723D3EFE900B6E296 /* LaunchScreen.storyboard */,
@@ -65,6 +68,27 @@
 				0C4976B223D3EFE800B6E296 /* vision_app_dev.xcdatamodeld */,
 			);
 			path = "vision-app-dev";
+			sourceTree = "<group>";
+		};
+		0C4976C023D3F01F00B6E296 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0C4976C123D3F02C00B6E296 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C4976C223D3F03B00B6E296 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C4976AE23D3EFE800B6E296 /* ViewController.swift in Sources */,
+				0C4976AE23D3EFE800B6E296 /* CameraVC.swift in Sources */,
 				0C4976B423D3EFE800B6E296 /* vision_app_dev.xcdatamodeld in Sources */,
 				0C4976AC23D3EFE700B6E296 /* AppDelegate.swift in Sources */,
 			);
