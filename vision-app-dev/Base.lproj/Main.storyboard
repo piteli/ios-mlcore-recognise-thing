@@ -63,7 +63,7 @@
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="la4-pY-43W">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="la4-pY-43W" customClass="RoundedImageView" customModule="vision_app_dev" customModuleProvider="target">
                                         <rect key="frame" x="280" y="499" width="75" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="JdC-yb-Oo6"/>
