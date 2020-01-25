@@ -51,44 +51,46 @@
                                             <constraint firstAttribute="trailing" secondItem="CxK-Rp-Am3" secondAttribute="trailing" constant="8" id="wPu-Q5-RIs"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzo-RM-DRS" customClass="RoundedShadowButton" customModule="vision_app_dev" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="591" width="85" height="36"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="85" id="YQF-Rg-gI4"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                        <state key="normal" title="Flash Off">
-                                            <color key="titleColor" red="0.80784313730000001" green="0.3294117647" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="la4-pY-43W" customClass="RoundedImageView" customModule="vision_app_dev" customModuleProvider="target">
-                                        <rect key="frame" x="280" y="499" width="75" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="JdC-yb-Oo6"/>
-                                            <constraint firstAttribute="height" constant="128" id="V5g-wu-gfp"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="8y7-Rx-uC3" secondAttribute="trailing" constant="20" id="3zf-eo-HVc"/>
-                                    <constraint firstItem="8y7-Rx-uC3" firstAttribute="leading" secondItem="3zr-vq-uRq" secondAttribute="leading" constant="20" id="5zG-SG-ISP"/>
-                                    <constraint firstItem="Qzo-RM-DRS" firstAttribute="leading" secondItem="3zr-vq-uRq" secondAttribute="leading" constant="20" id="7MQ-nW-LgL"/>
-                                    <constraint firstAttribute="trailing" secondItem="la4-pY-43W" secondAttribute="trailing" constant="20" id="S7m-Hr-RiI"/>
-                                    <constraint firstAttribute="bottom" secondItem="la4-pY-43W" secondAttribute="bottom" constant="20" id="UWz-TP-fom"/>
-                                    <constraint firstAttribute="bottom" secondItem="Qzo-RM-DRS" secondAttribute="bottom" constant="20" id="X9V-uq-RsV"/>
-                                    <constraint firstItem="8y7-Rx-uC3" firstAttribute="top" secondItem="3zr-vq-uRq" secondAttribute="top" constant="30" id="xIh-iD-jNL"/>
+                                    <constraint firstItem="8y7-Rx-uC3" firstAttribute="leading" secondItem="3zr-vq-uRq" secondAttribute="leading" constant="20" id="8L0-EP-LzD"/>
+                                    <constraint firstItem="8y7-Rx-uC3" firstAttribute="top" secondItem="3zr-vq-uRq" secondAttribute="top" constant="30" id="9Ug-c1-VSc"/>
+                                    <constraint firstAttribute="trailing" secondItem="8y7-Rx-uC3" secondAttribute="trailing" constant="20" id="Hfc-4G-SBe"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="la4-pY-43W" customClass="RoundedImageView" customModule="vision_app_dev" customModuleProvider="target">
+                                <rect key="frame" x="280" y="519" width="75" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="JdC-yb-Oo6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="PTf-0T-4gZ"/>
+                                    <constraint firstAttribute="height" constant="128" id="V5g-wu-gfp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="w74-rF-Gsa"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzo-RM-DRS" customClass="RoundedShadowButton" customModule="vision_app_dev" customModuleProvider="target">
+                                <rect key="frame" x="20" y="611" width="100" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="YQF-Rg-gI4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Flash Off">
+                                    <color key="titleColor" red="0.80784313730000001" green="0.3294117647" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="la4-pY-43W" secondAttribute="bottom" constant="20" id="94b-ys-U7o"/>
                             <constraint firstItem="3zr-vq-uRq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GCh-cf-4Qm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qzo-RM-DRS" secondAttribute="bottom" constant="20" id="GmN-hY-ORg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3zr-vq-uRq" secondAttribute="trailing" id="LJc-BN-Y7U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="la4-pY-43W" secondAttribute="trailing" constant="20" id="hEL-Uh-Tym"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3zr-vq-uRq" secondAttribute="bottom" id="wRI-LB-zpL"/>
                             <constraint firstItem="3zr-vq-uRq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ybw-GB-WVh"/>
+                            <constraint firstItem="Qzo-RM-DRS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zOF-AY-Qcf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
