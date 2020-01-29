@@ -14,6 +14,7 @@ class CameraVC: UIViewController {
     var captureSession: AVCaptureSession!
     var cameraOutput: AVCapturePhotoOutput!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    var photoData : Data?
 
     @IBOutlet weak var captureImageView: RoundedImageView!
     @IBOutlet weak var flashBtn: RoundedShadowButton!
@@ -63,8 +64,20 @@ class CameraVC: UIViewController {
     func didTapCameraView(){
         let settings = AVCapturePhotoSettings()
         let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
-        let previewForm = [kCVPixelBufferPixelFormatTypeKey as String : previewPixelType]
+        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String : previewPixelType, kCVPixelBufferWidthKey as String : 160, kCVPixelBufferHeightKey as String : 160]
+        settings.previewPhotoFormat = previewFormat
+        cameraOutput.capturePhoto(with: settings, delegate: self)
         
+    }
+}
+
+extension CameraVC : AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let error = error{
+            debugPrint(error)
+        } else {
+            
+        }
     }
 }
 
