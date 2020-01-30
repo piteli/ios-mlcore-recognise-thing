@@ -34,6 +34,9 @@ class CameraVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        let tap = UITapGestureRecognizer(target : self, action : #selector(didTapCameraView))
+        tap.numberOfTapsRequired = 1
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = AVCaptureSession.Preset.hd1920x1080
         
@@ -53,6 +56,7 @@ class CameraVC: UIViewController {
                 previewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
                 
                 cameraView.layer.addSublayer(previewLayer!)
+                cameraView.addGestureRecognizer(tap)
                 captureSession.startRunning()
             }
         } catch {
@@ -61,7 +65,7 @@ class CameraVC: UIViewController {
         
     }
     
-    func didTapCameraView(){
+    @objc func didTapCameraView(){
         let settings = AVCapturePhotoSettings()
         let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
         let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String : previewPixelType, kCVPixelBufferWidthKey as String : 160, kCVPixelBufferHeightKey as String : 160]
@@ -76,7 +80,10 @@ extension CameraVC : AVCapturePhotoCaptureDelegate {
         if let error = error{
             debugPrint(error)
         } else {
+            photoData = photo.fileDataRepresentation()
             
+            let image = UIImage(data : photoData!)
+            self.captureImageView.image = image
         }
     }
 }
