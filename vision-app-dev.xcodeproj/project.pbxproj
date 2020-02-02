@@ -16,6 +16,7 @@
 		0C4976B423D3EFE800B6E296 /* vision_app_dev.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C4976B223D3EFE800B6E296 /* vision_app_dev.xcdatamodeld */; };
 		0C4976B623D3EFE900B6E296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4976B523D3EFE900B6E296 /* Assets.xcassets */; };
 		0C4976B923D3EFE900B6E296 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4976B723D3EFE900B6E296 /* LaunchScreen.storyboard */; };
+		0CA4591823E678D900F0EE67 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0CA4591723E678D900F0EE67 /* SqueezeNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0C4976B523D3EFE900B6E296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C4976B823D3EFE900B6E296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C4976BA23D3EFE900B6E296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CA4591723E678D900F0EE67 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		0C4976AA23D3EFE700B6E296 /* vision-app-dev */ = {
 			isa = PBXGroup;
 			children = (
+				0CA4591723E678D900F0EE67 /* SqueezeNet.mlmodel */,
 				0C4976C223D3F03B00B6E296 /* Resources */,
 				0C4976C123D3F02C00B6E296 /* View */,
 				0C4976C023D3F01F00B6E296 /* Controller */,
@@ -174,6 +177,7 @@
 				0C08BAD823D73EFB0070C51F /* RoundedShadowView.swift in Sources */,
 				0C08BADA23D7411F0070C51F /* RoundedShadowButton.swift in Sources */,
 				0C08BADE23D741880070C51F /* RoundedImageView.swift in Sources */,
+				0CA4591823E678D900F0EE67 /* SqueezeNet.mlmodel in Sources */,
 				0C4976AE23D3EFE800B6E296 /* CameraVC.swift in Sources */,
 				0C4976B423D3EFE800B6E296 /* vision_app_dev.xcdatamodeld in Sources */,
 				0C4976AC23D3EFE700B6E296 /* AppDelegate.swift in Sources */,
