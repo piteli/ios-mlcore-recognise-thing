@@ -84,6 +84,12 @@ class CameraVC: UIViewController {
         for classification in results {
             if classification.confidence < 0.5 {
                 self.identificationLbl.text = "I'm not sure what this is, Please try again."
+                self.confidenceLbl.text = ""
+                break
+            } else {
+                self.identificationLbl.text = classification.identifier
+                self.confidenceLbl.text = "CONFIDENCE: \(Int(classification.confidence * 100))%"
+                break
             }
         }
     }
