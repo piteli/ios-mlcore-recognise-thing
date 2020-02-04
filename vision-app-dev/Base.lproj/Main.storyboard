@@ -52,7 +52,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.70196078431372544" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="8y7-Rx-uC3" firstAttribute="leading" secondItem="3zr-vq-uRq" secondAttribute="leading" constant="20" id="8L0-EP-LzD"/>
                                     <constraint firstItem="8y7-Rx-uC3" firstAttribute="top" secondItem="3zr-vq-uRq" secondAttribute="top" constant="30" id="9Ug-c1-VSc"/>
@@ -79,6 +79,9 @@
                                     <color key="titleColor" red="0.80784313730000001" green="0.3294117647" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="flashBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qOj-ze-6jR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
