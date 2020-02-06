@@ -22,6 +22,8 @@ class CameraVC: UIViewController {
     var previewLayer: AVCaptureVideoPreviewLayer!
     var photoData : Data?
     
+    var speechSyncthesizer = AVSpeechSynthesizer()
+    
     var flashControlState : FlashState = .off
 
     @IBOutlet weak var captureImageView: RoundedImageView!
@@ -33,7 +35,7 @@ class CameraVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        speechSyncthesizer.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -96,15 +98,24 @@ class CameraVC: UIViewController {
         
         for classification in results {
             if classification.confidence < 0.5 {
-                self.identificationLbl.text = "I'm not sure what this is, Please try again."
+                let unknownObjectMessage = "I'm not sure what this is, Please try again."
+                self.identificationLbl.text = unknownObjectMessage
+                synthesizeSpeech(fromString: unknownObjectMessage)
                 self.confidenceLbl.text = ""
                 break
             } else {
-                self.identificationLbl.text = classification.identifier
-                self.confidenceLbl.text = "CONFIDENCE: \(Int(classification.confidence * 100))%"
+                let identification = classification.identifier
+                let confidence = Int(classification.confidence * 100)
+                self.identificationLbl.text = identification
+                self.confidenceLbl.text = "CONFIDENCE: \(confidence)%"
                 break
             }
         }
+    }
+    
+    func synthesizeSpeech(fromString string : String){
+        let speechUtterance = AVSpeechUtterance(string : string)
+        speechSyncthesizer.speak(speechUtterance)
     }
     
     @IBAction func flashBtnWasPressed(_ sender: Any) {
@@ -141,6 +152,12 @@ extension CameraVC : AVCapturePhotoCaptureDelegate {
             let image = UIImage(data : photoData!)
             self.captureImageView.image = image
         }
+    }
+}
+
+extension CameraVC: AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        <#code#>
     }
 }
 
