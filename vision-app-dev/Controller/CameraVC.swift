@@ -108,6 +108,8 @@ class CameraVC: UIViewController {
                 let confidence = Int(classification.confidence * 100)
                 self.identificationLbl.text = identification
                 self.confidenceLbl.text = "CONFIDENCE: \(confidence)%"
+                let completeSentence = "This looks like a \(identification) and I'm \(confidence) percent sure."
+                synthesizeSpeech(fromString: completeSentence)
                 break
             }
         }
