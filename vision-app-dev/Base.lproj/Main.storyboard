@@ -83,6 +83,9 @@
                                     <action selector="flashBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qOj-ze-6jR"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3fR-BP-ztK">
+                                <rect key="frame" x="307.5" y="573" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -91,6 +94,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qzo-RM-DRS" secondAttribute="bottom" constant="20" id="GmN-hY-ORg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3zr-vq-uRq" secondAttribute="trailing" id="LJc-BN-Y7U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="la4-pY-43W" secondAttribute="trailing" constant="20" id="hEL-Uh-Tym"/>
+                            <constraint firstItem="3fR-BP-ztK" firstAttribute="centerX" secondItem="la4-pY-43W" secondAttribute="centerX" id="v2o-dt-8eh"/>
+                            <constraint firstItem="3fR-BP-ztK" firstAttribute="centerY" secondItem="la4-pY-43W" secondAttribute="centerY" id="vcW-0o-ctj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3zr-vq-uRq" secondAttribute="bottom" id="wRI-LB-zpL"/>
                             <constraint firstItem="3zr-vq-uRq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ybw-GB-WVh"/>
                             <constraint firstItem="Qzo-RM-DRS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zOF-AY-Qcf"/>
@@ -104,6 +109,7 @@
                         <outlet property="flashBtn" destination="Qzo-RM-DRS" id="GZz-bA-Nai"/>
                         <outlet property="identificationLbl" destination="wU1-52-pes" id="Y4R-3o-oki"/>
                         <outlet property="roundedLblView" destination="8y7-Rx-uC3" id="T4Q-2n-1kV"/>
+                        <outlet property="spinner" destination="3fR-BP-ztK" id="dzu-CR-QW3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

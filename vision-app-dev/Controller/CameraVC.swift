@@ -32,6 +32,7 @@ class CameraVC: UIViewController {
     @IBOutlet weak var confidenceLbl: UILabel!
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var roundedLblView: RoundedShadowView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -79,6 +80,10 @@ class CameraVC: UIViewController {
     @objc func didTapCameraView(){
         self.cameraView.isUserInteractionEnabled = false
         let settings = AVCapturePhotoSettings()
+        
+        self.cameraView.isUserInteractionEnabled = false
+        self.spinner.isHidden = false
+        self.spinner.startAnimating()
         
         settings.previewPhotoFormat = settings.embeddedThumbnailPhotoFormat
         
@@ -159,7 +164,9 @@ extension CameraVC : AVCapturePhotoCaptureDelegate {
 
 extension CameraVC: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        <#code#>
+        self.cameraView.isUserInteractionEnabled = true
+        self.spinner.isHidden = true
+        self.spinner.stopAnimating()
     }
 }
 
