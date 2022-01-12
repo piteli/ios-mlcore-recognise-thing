@@ -1,6 +1,8 @@
 # ios-mlcore-recognise-thing
 A ML Core iOS app where the app can recognise objects using ML Core kit with train data from official Apple website.
 
+This project is created for educational purpose only.
+
 ## Completed
 * Complete Core feature - recognise objects by scan with camera and tell directly of the object name.
 * Added accuracy level of scanned
